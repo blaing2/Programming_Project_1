@@ -14,7 +14,7 @@ public class GunController : MonoBehaviour {
   {
     if (Input.GetKeyDown(KeyCode.Mouse0))
     {
-      if (lastFire + .5F <= Time.time)
+      if (lastFire <= Time.time)
       {
         lastFire = Time.time;
         Fire();

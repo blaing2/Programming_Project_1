@@ -71,10 +71,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4827116665361256}
   - component: {fileID: 136395354689826338}
-  - component: {fileID: 114557442556032654}
   - component: {fileID: 54922537845524780}
+  - component: {fileID: 114554838714820728}
   m_Layer: 9
-  m_Name: Enemy_Paniced
+  m_Name: Enemy_Smart
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 1858310033001620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.6700001, z: -0}
-  m_LocalScale: {x: 20, y: 2, z: 20}
+  m_LocalScale: {x: 15, y: 2, z: 15}
   m_Children: []
   m_Father: {fileID: 4827116665361256}
   m_RootOrder: 4
@@ -174,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1486795951750996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.85, y: 1.6199632, z: -29.7}
+  m_LocalPosition: {x: 29.96296, y: 1.671963, z: -14.307657}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4902304426813262}
@@ -246,7 +246,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 92769e7b093e17141841ae2427e6448c, type: 2}
+  - {fileID: 2100000, guid: c2baf06743de7b7498cfadf775fdb634, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -418,7 +418,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &114557442556032654
+--- !u!114 &114554838714820728
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -426,18 +426,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1486795951750996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31bba88f0a66a3d41ae3aa07a3d65543, type: 3}
+  m_Script: {fileID: 11500000, guid: 359cf1601a8e2fd409ebb1e1d1d69501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  self: {fileID: 1486795951750996}
   gameController: {fileID: 0}
-  moveSpeed: 8
-  moveDirectionTime: 1
-  moveTimeStamp: 0
-  bullet: {fileID: 1621247537875474, guid: cc56967bb29f7bf478bc279f900f9393, type: 2}
-  somethingTouchedMe: 0
-  gettingTiredTimeCooldown: 5
-  gettingTiredTime: 0
+  enemyNearByBool: 0
+  enemyNearByInt: 0
+  currentBullet: {fileID: 0}
 --- !u!136 &136288588866097946
 CapsuleCollider:
   m_ObjectHideFlags: 1
